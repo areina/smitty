@@ -1,0 +1,9 @@
+root:
+  listen: 172.19.111.15:22121
+  hash: fnv1a_64
+  distribution: ketama
+  redis: true
+  server_retry_timeout: 100
+  server_failure_limit: 500
+  servers:
+  - 127.0.0.1:10100:1 sentinel-test
