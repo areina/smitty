@@ -1,10 +1,10 @@
-# smitty
+smitty
+======
 
-smitty is an agent for [twemproxy](https://github.com/twitter/twemproxy) configured to work with [redis
-sentinel](http://redis.io/topics/sentinel). Its purpose is maintain the twemproxy's configuration
-updated with the active redis masters. For this, smitty monitors for
-the **+switch-master** event, updates twemproxy configuration and restarts
-the twemproxy process.
+Smitty is an agent written in [Go](http://golang.org/) language for [twemproxy](https://github.com/twitter/twemproxy) configured to work with [redis
+sentinel](http://redis.io/topics/sentinel). Smitty's purpose is to extend the HA capabilities of twemproxy even after a redis node has failed.
+
+In order to accomplish this, smitty is continuously monitoring the **+switch-master** event, then it will update twemproxy configuration files and restart the resource.
 
 ### A possible scenario:
 
@@ -30,8 +30,7 @@ file, also included in [conf/agent.yml](conf/agent.yml) could be this:
 
 ## The name
 
-In [3scale](http://3scale.net), we're an absolute Futurama fanatics,
-and of course there isn't a better name for an agent that Smitty:
+At [3scale](http://3scale.net), we're an absolute Futurama fanatics, and of course there isn't a better name for an agent that Smitty:
 
 ![Image](smitty.jpg)
 
